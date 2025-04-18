@@ -94,7 +94,7 @@ if selected == "Disease Prediction":
 # Diabetes prediction page
 if selected == "Diabetes Prediction":  # pagetitle
     st.title("Diabetes disease prediction")
-    image = Image.open(r"d3.jpg")
+    image = Image.open(r"Multiple_Disease/d3.jpg")
     st.image(image, caption="diabetes disease prediction")
     # columns
     # no inputs from the user
