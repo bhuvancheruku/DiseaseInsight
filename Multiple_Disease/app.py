@@ -18,23 +18,23 @@ import joblib
 
 # loading the models
 diabetes_model = joblib.load(r"Multiple_Disease/models/diabetes_model.sav")
-heart_model = joblib.load("models/heart_disease_model.sav")
-parkinson_model = joblib.load("models/parkinsons_model.sav")
+heart_model = joblib.load(r"Multiple_Disease/models/heart_disease_model.sav")
+parkinson_model = joblib.load(r"Multiple_Disease/models/parkinsons_model.sav")
 # Load the lung cancer prediction model
-lung_cancer_model = joblib.load("models/lung_cancer_model.sav")
+lung_cancer_model = joblib.load(r"Multiple_Disease/models/lung_cancer_model.sav")
 
 # Load the pre-trained model
-breast_cancer_model = joblib.load(r"models/breast_cancer.sav")
+breast_cancer_model = joblib.load(r"Multiple_Disease/models/breast_cancer.sav")
 
 # Load the pre-trained model
-chronic_disease_model = joblib.load(r"models/chronic_model.sav")
+chronic_disease_model = joblib.load(r"Multiple_Disease/models/chronic_model.sav")
 
 # Load the hepatitis prediction model
-hepatitis_model = joblib.load(r"models/hepititisc_model.sav")
+hepatitis_model = joblib.load(r"Multiple_Disease/models/hepititisc_model.sav")
 
 
-liver_model = joblib.load(r"models/liver_model.sav")# Load the lung cancer prediction model
-lung_cancer_model = joblib.load(r"models/lung_cancer_model.sav")
+liver_model = joblib.load(r"Multiple_Disease/models/liver_model.sav")# Load the lung cancer prediction model
+lung_cancer_model = joblib.load(r"Multiple_Disease/models/lung_cancer_model.sav")
 
 
 # sidebar
@@ -61,7 +61,7 @@ with st.sidebar:
 if selected == "Disease Prediction": 
     # Create disease class and load ML model
     disease_model = DiseaseModel()
-    disease_model.load_xgboost(r"model/xgboost_model.json")
+    disease_model.load_xgboost(r"Multiple_Disease/model/xgboost_model.json")
 
     # Title
     st.write("# Disease Prediction using Machine Learning")
