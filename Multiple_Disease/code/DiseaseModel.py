@@ -49,7 +49,7 @@ class DiseaseModel:
             return "That disease is not contemplated in this model"
 
         # Read precautions dataframe
-        prec_df = pd.read_csv('data/symptom_precaution.csv')
+        prec_df = pd.read_csv('Multiple_Disease/data/symptom_precaution.csv')
         prec_df = prec_df.apply(lambda col: col.str.strip())
 
         return prec_df[prec_df['Disease'] == disease_name].filter(regex='Precaution').values.tolist()[0]
