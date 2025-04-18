@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import joblib
 
 # loading the models
-diabetes_model = joblib.load("models/diabetes_model.sav")
+diabetes_model = joblib.load(r"Multiple_Disease/models/diabetes_model.sav")
 heart_model = joblib.load("models/heart_disease_model.sav")
 parkinson_model = joblib.load("models/parkinsons_model.sav")
 # Load the lung cancer prediction model
