@@ -17,24 +17,24 @@ import matplotlib.pyplot as plt
 import joblib
 
 # loading the models
-diabetes_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/diabetes_model.sav")
-heart_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/heart_disease_model.sav")
-parkinson_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/parkinsons_model.sav")
+diabetes_model = joblib.load(r"models/diabetes_model.sav")
+heart_model = joblib.load(r"models/heart_disease_model.sav")
+parkinson_model = joblib.load(r"models/parkinsons_model.sav")
 # Load the lung cancer prediction model
-lung_cancer_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/lung_cancer_model.sav")
+lung_cancer_model = joblib.load(r"models/lung_cancer_model.sav")
 
 # Load the pre-trained model
-breast_cancer_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/breast_cancer.sav")
+breast_cancer_model = joblib.load(r"models/breast_cancer.sav")
 
 # Load the pre-trained model
-chronic_disease_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/chronic_model.sav")
+chronic_disease_model = joblib.load(r"models/chronic_model.sav")
 
 # Load the hepatitis prediction model
-hepatitis_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/hepititisc_model.sav")
+hepatitis_model = joblib.load(r"models/hepititisc_model.sav")
 
 
-liver_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/liver_model.sav")# Load the lung cancer prediction model
-lung_cancer_model = joblib.load(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/models/lung_cancer_model.sav")
+liver_model = joblib.load(r"models/liver_model.sav")# Load the lung cancer prediction model
+lung_cancer_model = joblib.load(r"models/lung_cancer_model.sav")
 
 
 # sidebar
@@ -61,7 +61,7 @@ with st.sidebar:
 if selected == "Disease Prediction": 
     # Create disease class and load ML model
     disease_model = DiseaseModel()
-    disease_model.load_xgboost(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/model/xgboost_model.json")
+    disease_model.load_xgboost(r"model/xgboost_model.json")
 
     # Title
     st.write("# Disease Prediction using Machine Learning")
@@ -94,7 +94,7 @@ if selected == "Disease Prediction":
 # Diabetes prediction page
 if selected == "Diabetes Prediction":  # pagetitle
     st.title("Diabetes disease prediction")
-    image = Image.open(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/d3.jpg")
+    image = Image.open(r"d3.jpg")
     st.image(image, caption="diabetes disease prediction")
     # columns
     # no inputs from the user
@@ -353,7 +353,7 @@ if selected == "Parkison Prediction":
 
 
 # Load the dataset
-lung_cancer_data = pd.read_csv(r"C:/Users/snith/Downloads/DiseaseInsight/Multiple-Disease-Prediction-Webapp-main/data/lung_cancer.csv")
+lung_cancer_data = pd.read_csv(r"data/lung_cancer.csv")
 
 # Convert "M" to 0 and "F" to 1 in the "GENDER" column
 lung_cancer_data["GENDER"] = lung_cancer_data["GENDER"].map({"M": "Male", "F": "Female"})
