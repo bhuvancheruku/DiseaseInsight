@@ -353,7 +353,7 @@ if selected == "Parkison Prediction":
 
 
 # Load the dataset
-lung_cancer_data = pd.read_csv(r"data/lung_cancer.csv")
+lung_cancer_data = pd.read_csv(r"Multiple_Disease/data/lung_cancer.csv")
 
 # Convert "M" to 0 and "F" to 1 in the "GENDER" column
 lung_cancer_data["GENDER"] = lung_cancer_data["GENDER"].map({"M": "Male", "F": "Female"})
@@ -459,7 +459,7 @@ if selected == "Lung Cancer Prediction":
 # Liver prediction page
 if selected == "Liver prediction":  # pagetitle
     st.title("Liver disease prediction")
-    image = Image.open("liver.jpg")
+    image = Image.open("Multiple_Disease/liver.jpg")
     st.image(image, caption="Liver disease prediction.")
     # columns
     # no inputs from the user
@@ -505,11 +505,11 @@ if selected == "Liver prediction":  # pagetitle
 
         # after the prediction is done if the value in the list at index is 0 is 1 then the person is diabetic
         if liver_prediction[0] == 1:
-            image = Image.open("positive.jpg")
+            image = Image.open("Multiple_Disease/positive.jpg")
             st.image(image, caption="")
             liver_dig = "we are really sorry to say but it seems like you have liver disease."
         else:
-            image = Image.open("negative.jpg")
+            image = Image.open("Multiple_Disease/negative.jpg")
             st.image(image, caption="")
             liver_dig = "Congratulation , You don't have liver disease."
         st.success(name+" , " + liver_dig)
@@ -522,7 +522,7 @@ if selected == "Liver prediction":  # pagetitle
 # Hepatitis prediction page
 if selected == "Hepatitis prediction":
     st.title("Hepatitis Prediction")
-    image = Image.open("h.png")
+    image = Image.open("Multiple_Disease/h.png")
     st.image(image, caption="Hepatitis Prediction")
 
     # Columns
@@ -586,11 +586,11 @@ if selected == "Hepatitis prediction":
         # Display result
         if hepatitis_prediction[0] == 1:
             hepatitis_result = "We are really sorry to say but it seems like you have Hepatitis."
-            image = Image.open("positive.jpg")
+            image = Image.open("Multiple_Disease/positive.jpg")
             st.image(image, caption="")
         else:
             hepatitis_result = "Congratulations, you do not have Hepatitis."
-            image = Image.open("negative.jpg")
+            image = Image.open("Multiple_Disease/negative.jpg")
             st.image(image, caption="")
 
         st.success(name + ", " + hepatitis_result)
@@ -608,7 +608,7 @@ if selected == "Hepatitis prediction":
 # jaundice prediction page
 if selected == "Jaundice prediction":  # pagetitle
     st.title("Jaundice disease prediction")
-    image = Image.open("j.jpg")
+    image = Image.open("Multiple_Disease/j.jpg")
     st.image(image, caption="Jaundice disease prediction")
     # columns
     # no inputs from the user
@@ -650,11 +650,11 @@ if selected == "Jaundice prediction":  # pagetitle
 
         # after the prediction is done if the value in the list at index is 0 is 1 then the person is diabetic
         if jaundice_prediction[0] == 1:
-            image = Image.open("positive.jpg")
+            image = Image.open("Multiple_Disease/positive.jpg")
             st.image(image, caption="")
             jaundice_dig = "we are really sorry to say but it seems like you have Jaundice."
         else:
-            image = Image.open("negative.jpg")
+            image = Image.open("Multiple_Disease/negative.jpg")
             st.image(image, caption="")
             jaundice_dig = "Congratulation , You don't have Jaundice."
         st.success(name+" , " + jaundice_dig)
@@ -786,11 +786,11 @@ if selected == "Chronic Kidney prediction":
         kidney_prediction = chronic_disease_model.predict(user_input)
         # Display result
         if kidney_prediction[0] == 1:
-            image = Image.open("positive.jpg")
+            image = Image.open("Multiple_Disease/positive.jpg")
             st.image(image, caption="")
             kidney_prediction_dig = "we are really sorry to say but it seems like you have kidney disease."
         else:
-            image = Image.open("negative.jpg")
+            image = Image.open("Multiple_Disease/negative.jpg")
             st.image(image, caption="")
             kidney_prediction_dig = "Congratulation , You don't have kidney disease."
         st.success(name+" , " + kidney_prediction_dig)
@@ -900,11 +900,11 @@ if selected == "Breast Cancer Prediction":
         breast_cancer_prediction = breast_cancer_model.predict(user_input)
         # Display result
         if breast_cancer_prediction[0] == 1:
-            image = Image.open("positive.jpg")
+            image = Image.open("Multiple_Disease/positive.jpg")
             st.image(image, caption="")
             breast_cancer_result = "The model predicts that you have Breast Cancer."
         else:
-            image = Image.open("negative.jpg")
+            image = Image.open("Multiple_Disease/negative.jpg")
             st.image(image, caption="")
             breast_cancer_result = "The model predicts that you don't have Breast Cancer."
 
