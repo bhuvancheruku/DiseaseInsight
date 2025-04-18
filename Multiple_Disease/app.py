@@ -150,7 +150,7 @@ if selected == "Diabetes Prediction":  # pagetitle
 # Heart prediction page
 if selected == "Heart disease Prediction":
     st.title("Heart disease prediction")
-    image = Image.open("heart2.jpg")
+    image = Image.open("Multiple_Disease/heart2.jpg")
     st.image(image, caption="heart failuire")
     # age	sex	cp	trestbps	chol	fbs	restecg	thalach	exang	oldpeak	slope	ca	thal	target
     # columns
@@ -257,12 +257,12 @@ if selected == "Heart disease Prediction":
 
         if heart_prediction[0] == 1:
             heart_dig = "we are really sorry to say but it seems like you have Heart Disease."
-            image = Image.open("positive.jpg")
+            image = Image.open("Multiple_Disease/positive.jpg")
             st.image(image, caption="")
             
         else:
             heart_dig = "Congratulation , You don't have Heart Disease."
-            image = Image.open("negative.jpg")
+            image = Image.open("Multiple_Disease/negative.jpg")
             st.image(image, caption="")
         st.success(name +" , " + heart_dig)
 
@@ -276,7 +276,7 @@ if selected == "Heart disease Prediction":
 
 if selected == "Parkison Prediction":
     st.title("Parkison prediction")
-    image = Image.open("p1.jpg")
+    image = Image.open("Multiple_Disease/p1.jpg")
     st.image(image, caption="parkinsons disease")
   # parameters
 #    name	MDVP:Fo(Hz)	MDVP:Fhi(Hz)	MDVP:Flo(Hz)	MDVP:Jitter(%)	MDVP:Jitter(Abs)	MDVP:RAP	MDVP:PPQ	Jitter:DDP	MDVP:Shimmer	MDVP:Shimmer(dB)	Shimmer:APQ3	Shimmer:APQ5	MDVP:APQ	Shimmer:DDA	NHR	HNR	status	RPDE	DFA	spread1	spread2	D2	PPE
@@ -342,11 +342,11 @@ if selected == "Parkison Prediction":
 
         if parkinson_prediction[0] == 1:
             parkinson_dig = "we are really sorry to say but it seems like you have Parkinson disease"
-            image = Image.open("positive.jpg")
+            image = Image.open("Multiple_Disease/positive.jpg")
             st.image(image, caption="")
         else:
             parkinson_dig = "Congratulation , You don't have Parkinson disease"
-            image = Image.open("negative.jpg")
+            image = Image.open("Multiple_Disease/negative.jpg")
             st.image(image, caption="")
         st.success(name+" , " + parkinson_dig)
 
@@ -361,7 +361,7 @@ lung_cancer_data["GENDER"] = lung_cancer_data["GENDER"].map({"M": "Male", "F": "
 # Lung Cancer prediction page
 if selected == "Lung Cancer Prediction":
     st.title("Lung Cancer Prediction")
-    image = Image.open("h.png")
+    image = Image.open("Multiple_Disease/h.png")
     st.image(image, caption="Lung Cancer Prediction")
 
     # Columns
@@ -444,11 +444,11 @@ if selected == "Lung Cancer Prediction":
         # Display result
         if cancer_prediction[0] == "YES":
             cancer_result = "The model predicts that there is a risk of Lung Cancer."
-            image = Image.open("positive.jpg")
+            image = Image.open("Multiple_Disease/positive.jpg")
             st.image(image, caption="")
         else:
             cancer_result = "The model predicts no significant risk of Lung Cancer."
-            image = Image.open("negative.jpg")
+            image = Image.open("Multiple_Disease/negative.jpg")
             st.image(image, caption="")
 
         st.success(name + ", " + cancer_result)
