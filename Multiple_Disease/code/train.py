@@ -10,7 +10,7 @@ import gzip
 # Machine learning model: XGBoost 
 
 # import the dataset
-dataset_df = pd.read_csv('data/dataset.csv')
+dataset_df = pd.read_csv('Multiple_Disease/data/dataset.csv')
 
 # Preprocess
 dataset_df = dataset_df.apply(lambda col: col.str.strip())
@@ -51,5 +51,5 @@ preds = model.predict(X_test)
 print(f"The accuracy of the model is {accuracy_score(y_test, preds)}")
 
 # Export model
-joblib.dump(model, gzip.open('model/model_binary.dat.gz', "wb"))
-model.save_model("model/xgboost_model.json")
+joblib.dump(model, gzip.open('Multiple_Disease/model/model_binary.dat.gz', "wb"))
+model.save_model("Multiple_Disease/model/xgboost_model.json")
